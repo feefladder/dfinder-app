@@ -19,4 +19,5 @@ async def root():
 
 @app.get("/api/calc-divisions/{divisions}")
 def calc_divisions(divisions: int):
-    return {"response" : dfinder.CalcDivisionsHTML(divisions)}
+    if (divisions>0):
+        return {"response" : dfinder.CalcDivisionsHTML(divisions)}
