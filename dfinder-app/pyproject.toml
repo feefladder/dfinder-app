@@ -2,7 +2,7 @@
 name = "dfinder-app"
 version = "0.1.0"
 description = ""
-authors = ["Joeperdefloep <ikbendeleukstethuis@gmail.com>"]
+authors = ["FreakyFee <freakyfee@proton.me>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
