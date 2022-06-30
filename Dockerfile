@@ -21,7 +21,7 @@ RUN apk update && apk add gcc python3-dev libffi-dev openssl-dev git g++ cargo
 RUN pip install poetry
 COPY ./dfinder-app/pyproject.toml ./dfinder-app/poetry.lock /app/
 WORKDIR /app/dfinder-app
-RUN poetry update
+# RUN poetry update # uncomment if dfinder repo changes
 RUN poetry install --no-root --no-dev
 
 FROM python:3.10.4-alpine3.15
