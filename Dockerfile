@@ -42,4 +42,4 @@ RUN cp nginx/default.conf /etc/nginx/http.d
 COPY --from=backend /app /app/dfinder-app
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-CMD ["sh", "-c", "nginx && ../.venv/bin/python -m uvicorn --host 0.0.0.0 --port 5000 main:app"]
+CMD ["sh", "-c", "nginx && ../.venv/bin/python -m uvicorn --host 0.0.0.0 --port 5000 --root-path /api main:app"]
