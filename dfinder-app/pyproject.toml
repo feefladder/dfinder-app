@@ -9,7 +9,7 @@ python = "^3.10"
 fastapi = "^0.78.0"
 Jinja2 = "^3.1.2"
 uvicorn = "^0.17.6"
-dfinder = {git = "https://github.com/feefladder/DFinder", rev = "main"}
+dfinder = {git = "https://github.com/feefladder/dfinder", rev = "main"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

@@ -81,9 +81,9 @@ test = ["pytest"]
 
 [package.source]
 type = "git"
-url = "https://github.com/feefladder/DFinder"
+url = "https://github.com/feefladder/dfinder"
 reference = "main"
-resolved_reference = "ed6f3f0548c50183bbb5eb9044094f245ae1438f"
+resolved_reference = "dbf2bb8439ece9b714bf0c003727cdadbbc37108"
 
 [[package]]
 name = "fastapi"
@@ -284,7 +284,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "f8849d771e170710c9b539854b89e683261c43a028409be226441c7b90553ed9"
+content-hash = "d174f350d6324d16af20de467ef300aa3ce8e28319afafafb1a9c50c91942453"
 
 [metadata.files]
 anyio = [
