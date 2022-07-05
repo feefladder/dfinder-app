@@ -81,9 +81,9 @@ test = ["pytest"]
 
 [package.source]
 type = "git"
-url = "https://github.com/feefladder/dfinder"
+url = "https://github.com/feefladder/DFinder"
 reference = "main"
-resolved_reference = "dbf2bb8439ece9b714bf0c003727cdadbbc37108"
+resolved_reference = "90b4bea0435b639166b66c73cd678a8422d7e0c2"
 
 [[package]]
 name = "fastapi"
@@ -251,7 +251,7 @@ full = ["itsdangerous", "jinja2", "python-multipart", "pyyaml", "requests"]
 
 [[package]]
 name = "typing-extensions"
-version = "4.2.0"
+version = "4.3.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
 category = "main"
 optional = false
@@ -284,7 +284,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "d174f350d6324d16af20de467ef300aa3ce8e28319afafafb1a9c50c91942453"
+content-hash = "f8849d771e170710c9b539854b89e683261c43a028409be226441c7b90553ed9"
 
 [metadata.files]
 anyio = [
@@ -440,8 +440,8 @@ starlette = [
     {file = "starlette-0.19.1.tar.gz", hash = "sha256:c6d21096774ecb9639acad41b86b7706e52ba3bf1dc13ea4ed9ad593d47e24c7"},
 ]
 typing-extensions = [
-    {file = "typing_extensions-4.2.0-py3-none-any.whl", hash = "sha256:6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708"},
-    {file = "typing_extensions-4.2.0.tar.gz", hash = "sha256:f1c24655a0da0d1b67f07e17a5e6b2a105894e6824b92096378bb3668ef02376"},
+    {file = "typing_extensions-4.3.0-py3-none-any.whl", hash = "sha256:25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02"},
+    {file = "typing_extensions-4.3.0.tar.gz", hash = "sha256:e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"},
 ]
 uvicorn = [
     {file = "uvicorn-0.17.6-py3-none-any.whl", hash = "sha256:19e2a0e96c9ac5581c01eb1a79a7d2f72bb479691acd2b8921fce48ed5b961a6"},
