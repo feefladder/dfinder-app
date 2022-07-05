@@ -70,7 +70,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 [[package]]
 name = "dfinder"
 version = "0.0.1"
-description = "A test project using pybind11"
+description = "A package for finding references on a paper"
 category = "main"
 optional = false
 python-versions = ">=3.6"
@@ -83,7 +83,7 @@ test = ["pytest"]
 type = "git"
 url = "https://github.com/feefladder/DFinder"
 reference = "main"
-resolved_reference = "90b4bea0435b639166b66c73cd678a8422d7e0c2"
+resolved_reference = "0b438b9a097640ff7044de3bd3edefa4ce76335c"
 
 [[package]]
 name = "fastapi"

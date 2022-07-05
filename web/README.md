@@ -1,4 +1,4 @@
-# web-2
+# DivisionFinder
 
 ## Project setup
 ```

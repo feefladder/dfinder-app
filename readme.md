@@ -35,6 +35,7 @@ firefox http://localhost:1312/
 
 ### quick serve
 This is useful so that you don't have to build a Docker container every time.
+Alternatively, you could also run the nginx server with normal settings...
 Make sure to change back when committing, or building a container:
 #### Run the backend:
 uncomment in dfinder-app/dfinder-app/main.py:
@@ -56,7 +57,7 @@ app.add_middleware(
 then run the uvicorn server on port 5000:
 ```
 cd dfinder-app/dfinder-app/
-poetry run uvicorn --port 5000 --root-path /api main:app
+poetry run uvicorn --port 5000 --root-path /api --reload main:app 
 ```
 
 #### Run the frontend:
@@ -67,10 +68,19 @@ const API_BASE = "http://127.0.0.1:5000/"
 ```
 then run the frontend application:
 ```
-cd web-2
+cd web
 yarn serve
 ```
 frontend will automatically update if you make changes.
+
+### Changes in dfinder
+Since dfinder is a github repo in pyproject, we have to manually remove and add
+it from poetry like so:
+```
+cd dfinder-app/dfinder-app/
+poetry remove dfinder
+poetry add git+https://github.com/feefladder/DFinder#main
+```
 ## thanks
 Special thanks go to:
  - Robert Lang for the algorithm
