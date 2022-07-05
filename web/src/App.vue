@@ -1,7 +1,7 @@
 <template>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
   <DiagramsContainer />
-  <input type="number" min="3" step="2" max="99" value="23" v-model="divisions">
+  <input type="number" min="3" step="2" max="99" v-model="divisions">
   <div class="container" v-html="diagrams.response">
   </div>
 </template>

@@ -1,6 +1,6 @@
 # build frontend stuff
 FROM node:16.14 as build-deps
-COPY web ./
+COPY web-2 ./
 RUN yarn install --frozen-lockfile
 RUN yarn lint
 # RUN yarn run test:unit
