@@ -1,90 +1,41 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <DiagramsContainer />
-  <input type="number" min="3" step="2" max="99" v-model="divisions">
-  <div class="container" v-html="diagrams.response">
+  <div class="app">
+    <DiagramStyling />
+    <h1>{{ title }}</h1>
+    Enter the number of divisions that you want to divide your paper into:
+    <DivisionInput />
+    <RefList />
   </div>
 </template>
 
-<script>
-import ProjectRepository from '@/repositories/ProjectRepository'
-import HelloWorld from './components/HelloWorld.vue'
-import DiagramsContainer from './components/DiagramsContainer.vue'
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import DivisionInput from './components/DivisionInput.vue';
+import RefList from './components/RefList.vue';
+import DiagramStyling from './components/DiagramStyling.vue';
 
-export default {
-  name: 'App',
+@Options({
   components: {
-    HelloWorld,
-    DiagramsContainer,
+    // HelloWorld,
+    DivisionInput,
+    RefList,
+    DiagramStyling,
   },
-  data() {
-    return {
-      divisions: 0,
-      diagrams: "stuff",
-    }
-  },
-  methods: {
-    async getDivisionDiagrams() {
-      if (this.divisions > 0 && this.divisions < 101)
-        this.diagrams = await ProjectRepository.getDiagrams(this.divisions)
-    }
-  },
-  watch: {
-    divisions() {
-      this.getDivisionDiagrams()
-    }
-  }
+})
+export default class App extends Vue {
+  public title = "DivisionFinder by FreakyFee, based on Robert Lang's ReferenceFinder";
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: left;
-  color: #2c3e50;
+  text-align: center;
+  color: #fff;
   margin-top: 60px;
+  
 }
-.diagram {
-  .pt_normal {
-    stroke: black;
-    stroke-width: 1;
-  }
-  .pt_hilite {
-    stroke: rgb(128,64,64);
-    stroke-width: 3;
-  }
-  .pt_action {
-    stroke: rgb(128,0,0);
-    stroke-width: 3;
-  }
-
-  .l_crease {
-    stroke: darkgray;
-    stroke-width: .5;
-  }
-  .l_edge {
-    stroke: black;
-    stroke-width: 2;
-  }
-  .l_hilite {
-    stroke: darkmagenta;
-    stroke-width: 2;
-  }
-  .l_valley {
-    stroke: green;
-    stroke-width: .5;
-    stroke-dasharray: 2;
-  }
-  .l_mountain {
-    stroke: green;
-    stroke-width: .5;
-    stroke-dasharray: 3 2 2 2;
-  }
-  .l_arrow {
-    stroke: darkgreen;
-    stroke-width: .5;
-  }
-}
+body {background: #1a1a1a;}
 </style>

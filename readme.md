@@ -32,6 +32,45 @@ docker build . --tag dfinder-latest
 docker run --publish 1312:80 --name dfinder dfinder-latest
 firefox http://localhost:1312/
 ```
+
+### quick serve
+This is useful so that you don't have to build a Docker container every time.
+Make sure to change back when committing, or building a container:
+#### Run the backend:
+uncomment in dfinder-app/dfinder-app/main.py:
+```
+from fastapi.middleware.cors import CORSMiddleware
+
+origins = [
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+```
+then run the uvicorn server on port 5000:
+```
+cd dfinder-app/dfinder-app/
+poetry run uvicorn --port 5000 --root-path /api main:app
+```
+
+#### Run the frontend:
+change the following lines:
+```
+const API_BASE = "http://127.0.0.1:5000/"
+// const API_BASE = `${location.protocol}//${host}:${port}/api/`
+```
+then run the frontend application:
+```
+cd web-2
+yarn serve
+```
+frontend will automatically update if you make changes.
 ## thanks
 Special thanks go to:
  - Robert Lang for the algorithm

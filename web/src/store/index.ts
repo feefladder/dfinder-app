@@ -1,4 +1,4 @@
-import { createStore, Mutation } from 'vuex'
+import { createStore} from 'vuex'
 
 export interface cycle {
   description: string,
@@ -20,10 +20,10 @@ export interface refs {
   Instructions: ref[],
 }
 
-const port = location.port;
-const host = location.hostname;
-
-const API_BASE = `${location.protocol}//${host}:${port}/api/`//"http://127.0.0.1:5000/"// + "api/" //uncomment + "api/ for procution
+const API_BASE = "http://127.0.0.1:5000/"
+// const port = location.port;
+// const host = location.hostname;
+// const API_BASE = `${location.protocol}//${host}:${port}/api/`
 const API_FUNCTION_CALC_DIVISIONS = API_BASE + 'calc-divs-svg/'
 const API_FUNCTION_FOLD_CYCLE = API_BASE + 'fold-cycle-svg/'
 

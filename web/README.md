@@ -1,4 +1,4 @@
-# dfinder-app
+# web-2
 
 ## Project setup
 ```
