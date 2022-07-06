@@ -29,11 +29,11 @@
   stroke-width: 1;
 }
 .pt_hilite {
-  stroke: rgb(128,64,64);
+  stroke: #922;
   stroke-width: 3;
 }
 .pt_action {
-  stroke: rgb(128,0,0);
+  stroke: #522;
   stroke-width: 3;
 }
 
@@ -42,7 +42,7 @@
   stroke-width: .5;
 }
 .l_edge {
-  stroke: black;
+  stroke: #000;
   stroke-width: 2;
 }
 .l_hilite {
@@ -53,5 +53,9 @@
   stroke: green;
   stroke-width: .5;
 stroke-dasharray: 2;
+}
+
+text {
+  fill: #522;
 }
 </style>

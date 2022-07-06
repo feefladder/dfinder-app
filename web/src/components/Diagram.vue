@@ -27,6 +27,7 @@ export default class Diagram extends Vue {
 
 <style scoped>
 .howto {
-  margin: 15px;
+  margin: 5px;
+  font-size: smaller;
 }
 </style>

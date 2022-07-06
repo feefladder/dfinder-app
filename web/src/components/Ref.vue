@@ -3,13 +3,7 @@
     <div class="instruction-description">
       <h2>{{instruction.description}}</h2>
     </div>
-    <div class="diagram-container">
-      <Diagram 
-        v-for="(diagram, i) in instruction.diagrams"
-        :key="i"
-        :diagram="diagram"
-        :verbal="instruction.verbal[i]"/>
-    </div>
+    <DiagramContainer :instruction="instruction" />
     <button @click="FoldCycle">Fold from this ref</button>
     <div class="cycle-container">
       <CycleInstructions v-if="instruction.cycle" :instructions="instruction.cycle"/>
@@ -19,13 +13,13 @@
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component'
-import Diagram from './Diagram.vue';
 import CycleInstructions from './CycleInstructions.vue';
+import DiagramContainer from './DiagramContainer.vue';
 
 @Options({
   props: ['instruction'],
   components: {
-    Diagram,
+    DiagramContainer,
     CycleInstructions,
   },
   methods: {

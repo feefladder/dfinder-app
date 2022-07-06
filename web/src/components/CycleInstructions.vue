@@ -1,21 +1,15 @@
 <template>
-  <div class="diagram-container">
-  <Diagram 
-    v-for="(diagram, i) in instructions.diagrams"
-    :key="i"
-    :diagram="diagram"
-    :verbal="instructions.verbal[i]" />
-  </div>
+  <DiagramContainer :instruction="instructions" />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import Diagram from "./Diagram.vue";
+import DiagramContainer from "./DiagramContainer.vue";
 
 @Options({
   props: ['instructions'],
   components: {
-      Diagram,
+      DiagramContainer,
   }
 })
 export default class CycleInstructions extends Vue {}
