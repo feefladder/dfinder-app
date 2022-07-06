@@ -1,7 +1,7 @@
 <template>
   <div class="diagram-howto" @click="toggleVerbal">
     <div class="diagram">
-        <svg width="150" height="150" viewBox="-20 -20 170 170" v-html="diagram"></svg>
+        <svg width="150" height="150" viewBox="-10 -10 170 170" v-html="diagram"></svg>
     </div>
     <div class="howto" v-if="showVerbal">
       {{verbal}}
