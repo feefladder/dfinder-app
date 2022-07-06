@@ -7,7 +7,8 @@
       <Diagram 
         v-for="(diagram, i) in instruction.diagrams"
         :key="i"
-        :diagram="diagram" />
+        :diagram="diagram"
+        :verbal="instruction.verbal[i]"/>
     </div>
     <button @click="FoldCycle">Fold from this ref</button>
     <div class="cycle-container">

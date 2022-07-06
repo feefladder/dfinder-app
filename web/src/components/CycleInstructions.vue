@@ -3,7 +3,8 @@
   <Diagram 
     v-for="(diagram, i) in instructions.diagrams"
     :key="i"
-    :diagram="diagram" />
+    :diagram="diagram"
+    :verbal="instructions.verbal[i]" />
   </div>
 </template>
 
