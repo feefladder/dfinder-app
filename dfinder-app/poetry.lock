@@ -83,7 +83,7 @@ test = ["pytest"]
 type = "git"
 url = "https://github.com/feefladder/DFinder"
 reference = "main"
-resolved_reference = "0b438b9a097640ff7044de3bd3edefa4ce76335c"
+resolved_reference = "15c527319364d1833beb7528abe125a02862ad7b"
 
 [[package]]
 name = "fastapi"
