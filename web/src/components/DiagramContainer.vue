@@ -1,5 +1,6 @@
 <template>
   <div class="diagram-container">
+    <button @click="toggleAllVerbalInstructions">Verbal instructions</button>
     <div class="diagram-list">
       <Diagram 
         v-for="(diagram, i) in instruction.diagrams"
@@ -7,11 +8,8 @@
         :diagram="diagram"
         :verbal="instruction.verbal[i]"/>
     </div>
-    <div class="verbal-instr">
-      <button @click="toggleAllVerbalInstructions">Verbal instructions</button>
-      <div class="all-verbal-instructions" v-if="showVerbalInstructions">
-        <div v-for="(verbal, i) in instruction.verbal" :key="i">{{verbal}}</div>
-      </div>
+    <div class="all-verbal-instructions" v-if="showVerbalInstructions">
+    <div v-for="(verbal, i) in instruction.verbal" :key="i">{{verbal}}</div>
     </div>
   </div>
 </template>

@@ -14,7 +14,8 @@ export default class DivisionInput extends Vue {
 
     public calcDivisions(): void {
         while (this.nDivisions % 2 == 0){this.nDivisions = this.nDivisions/2}
-        store.dispatch("calcDivisions", this.nDivisions);
+        if(this.nDivisions !== store.state.total)
+            store.dispatch("calcDivisions", this.nDivisions);
     }
 }
 </script>
